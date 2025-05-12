@@ -1,0 +1,820 @@
+{
+    "projectFileVersion": "2024-11-15-preview",
+    "stringIndexType": "Utf16CodeUnit",
+    "metadata": {
+        "projectKind": "Conversation",
+        "settings": {
+            "confidenceThreshold": 0,
+            "normalizeCasing": false,
+            "augmentDiacritics": false
+        },
+        "projectName": "Food",
+        "multilingual": false,
+        "description": "",
+        "language": "en-us"
+    },
+    "assets": {
+        "projectKind": "Conversation",
+        "intents": [
+            {
+                "category": "None"
+            },
+            {
+                "category": "OrderFood"
+            },
+            {
+                "category": "InquirePrice"
+            },
+            {
+                "category": "PlaceOrder"
+            },
+            {
+                "category": "CheckAvailability"
+            },
+            {
+                "category": "CancelOrder"
+            },
+            {
+                "category": "ModifyOrder"
+            },
+            {
+                "category": "InquireWaitTime"
+            },
+            {
+                "category": "InquireMenu"
+            }
+        ],
+        "entities": [
+            {
+                "category": "FoodItem",
+                "compositionSetting": "combineComponents"
+            },
+            {
+                "category": "Drink",
+                "compositionSetting": "combineComponents"
+            },
+            {
+                "category": "Request",
+                "compositionSetting": "combineComponents"
+            },
+            {
+                "category": "Customization",
+                "compositionSetting": "combineComponents"
+            },
+            {
+                "category": "Side",
+                "compositionSetting": "combineComponents"
+            },
+            {
+                "category": "FoodType",
+                "compositionSetting": "combineComponents"
+            },
+            {
+                "category": "Combo",
+                "compositionSetting": "combineComponents"
+            }
+        ],
+        "utterances": [
+            {
+                "text": "Can I have a turkey burger combo with iced tea?",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 12,
+                        "length": 19
+                    },
+                    {
+                        "category": "Drink",
+                        "offset": 36,
+                        "length": 8
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "What’s the price for a grilled chicken combo?",
+                "language": "en-us",
+                "intent": "InquirePrice",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 22,
+                        "length": 21
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Do you have the avocado wrap today?",
+                "language": "en-us",
+                "intent": "CheckAvailability",
+                "entities": [
+                    {
+                        "category": "FoodItem",
+                        "offset": 15,
+                        "length": 13
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Please cancel my order for a vanilla shake",
+                "language": "en-us",
+                "intent": "CancelOrder",
+                "entities": [
+                    {
+                        "category": "Drink",
+                        "offset": 28,
+                        "length": 13
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Add extra tomatoes to my veggie burger",
+                "language": "en-us",
+                "intent": "ModifyOrder",
+                "entities": [
+                    {
+                        "category": "Customization",
+                        "offset": 4,
+                        "length": 14
+                    },
+                    {
+                        "category": "FoodItem",
+                        "offset": 24,
+                        "length": 13
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "How long will my iced latte take?",
+                "language": "en-us",
+                "intent": "InquireWaitTime",
+                "entities": [
+                    {
+                        "category": "Drink",
+                        "offset": 17,
+                        "length": 10
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "What dairy-free options do you offer?",
+                "language": "en-us",
+                "intent": "InquireMenu",
+                "entities": [
+                    {
+                        "category": "FoodType",
+                        "offset": 5,
+                        "length": 10
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "I need a quick fish combo with mozzarella sticks",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Request",
+                        "offset": 7,
+                        "length": 5
+                    },
+                    {
+                        "category": "Combo",
+                        "offset": 15,
+                        "length": 10
+                    },
+                    {
+                        "category": "Side",
+                        "offset": 31,
+                        "length": 17
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Can you get me a BBQ chicken sandwich with no sauce?",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "FoodItem",
+                        "offset": 17,
+                        "length": 20
+                    },
+                    {
+                        "category": "Customization",
+                        "offset": 43,
+                        "length": 8
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Remove pickles from my bacon cheeseburger",
+                "language": "en-us",
+                "intent": "ModifyOrder",
+                "entities": [
+                    {
+                        "category": "Request",
+                        "offset": 0,
+                        "length": 14
+                    },
+                    {
+                        "category": "FoodItem",
+                        "offset": 23,
+                        "length": 18
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "I’d like a kids combo with milk and a toy",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 11,
+                        "length": 10
+                    },
+                    {
+                        "category": "Drink",
+                        "offset": 27,
+                        "length": 4
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "How much is the spicy wrap combo?",
+                "language": "en-us",
+                "intent": "InquirePrice",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 16,
+                        "length": 16
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Is the mango smoothie still available?",
+                "language": "en-us",
+                "intent": "CheckAvailability",
+                "entities": [
+                    {
+                        "category": "Drink",
+                        "offset": 7,
+                        "length": 14
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Can I get a double combo with fries and a root beer?",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 12,
+                        "length": 12
+                    },
+                    {
+                        "category": "Side",
+                        "offset": 30,
+                        "length": 5
+                    },
+                    {
+                        "category": "Drink",
+                        "offset": 42,
+                        "length": 9
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Do you have any keto-friendly items?",
+                "language": "en-us",
+                "intent": "InquireMenu",
+                "entities": [
+                    {
+                        "category": "FoodType",
+                        "offset": 16,
+                        "length": 13
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "I want a breakfast combo with a hot coffee in a rush",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 9,
+                        "length": 15
+                    },
+                    {
+                        "category": "Drink",
+                        "offset": 32,
+                        "length": 10
+                    },
+                    {
+                        "category": "Request",
+                        "offset": 46,
+                        "length": 6
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Cancel my order for a strawberry smoothie",
+                "language": "en-us",
+                "intent": "CancelOrder",
+                "entities": [
+                    {
+                        "category": "Drink",
+                        "offset": 22,
+                        "length": 19
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "How long for a chicken combo to be ready?",
+                "language": "en-us",
+                "intent": "InquireWaitTime",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 15,
+                        "length": 13
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Can I order a spicy combo with no onions and a pepsi?",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 14,
+                        "length": 11
+                    },
+                    {
+                        "category": "Customization",
+                        "offset": 31,
+                        "length": 9
+                    },
+                    {
+                        "category": "Drink",
+                        "offset": 47,
+                        "length": 5
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Is the seasonal spicy taco still on the menu?",
+                "language": "en-us",
+                "intent": "CheckAvailability",
+                "entities": [
+                    {
+                        "category": "FoodItem",
+                        "offset": 16,
+                        "length": 10
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "I want to order a cheeseburger and a coke",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "FoodItem",
+                        "offset": 18,
+                        "length": 12
+                    },
+                    {
+                        "category": "Drink",
+                        "offset": 37,
+                        "length": 4
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Can you make it quick? I need a large fries and a chicken sandwich",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Request",
+                        "offset": 8,
+                        "length": 13
+                    },
+                    {
+                        "category": "FoodItem",
+                        "offset": 32,
+                        "length": 11
+                    },
+                    {
+                        "category": "FoodItem",
+                        "offset": 50,
+                        "length": 16
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "How much is a double cheeseburger combo?",
+                "language": "en-us",
+                "intent": "InquirePrice",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 14,
+                        "length": 25
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Can I get a vegetarian burger with no mayo?",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "FoodItem",
+                        "offset": 12,
+                        "length": 17
+                    },
+                    {
+                        "category": "Customization",
+                        "offset": 35,
+                        "length": 7
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Is the spicy chicken wrap available today?",
+                "language": "en-us",
+                "intent": "CheckAvailability",
+                "entities": [
+                    {
+                        "category": "FoodItem",
+                        "offset": 7,
+                        "length": 18
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Cancel my order for a milkshake",
+                "language": "en-us",
+                "intent": "CancelOrder",
+                "entities": [
+                    {
+                        "category": "Drink",
+                        "offset": 22,
+                        "length": 9
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Can you add extra ketchup to my burger?",
+                "language": "en-us",
+                "intent": "ModifyOrder",
+                "entities": [
+                    {
+                        "category": "Customization",
+                        "offset": 12,
+                        "length": 13
+                    },
+                    {
+                        "category": "FoodItem",
+                        "offset": 32,
+                        "length": 6
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "I’d like a kids meal with apple slices",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "FoodType",
+                        "offset": 11,
+                        "length": 9
+                    },
+                    {
+                        "category": "Side",
+                        "offset": 26,
+                        "length": 5
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "What’s the wait time for a large coffee?",
+                "language": "en-us",
+                "intent": "InquireWaitTime",
+                "entities": [
+                    {
+                        "category": "FoodItem",
+                        "offset": 27,
+                        "length": 12
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Do you have any vegan options?",
+                "language": "en-us",
+                "intent": "InquireMenu",
+                "entities": [
+                    {
+                        "category": "FoodType",
+                        "offset": 16,
+                        "length": 5
+                    },
+                    {
+                        "category": "Customization",
+                        "offset": 22,
+                        "length": 7
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Give me a chicken nugget combo with a sprite",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 10,
+                        "length": 20
+                    },
+                    {
+                        "category": "Drink",
+                        "offset": 38,
+                        "length": 6
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "I need two cheeseburger combos with no onions",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 11,
+                        "length": 19
+                    },
+                    {
+                        "category": "Customization",
+                        "offset": 36,
+                        "length": 9
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "What’s the price of a fish sandwich combo?",
+                "language": "en-us",
+                "intent": "InquirePrice",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 22,
+                        "length": 19
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Can I have a bacon cheeseburger with extra pickles?",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "FoodItem",
+                        "offset": 13,
+                        "length": 18
+                    },
+                    {
+                        "category": "Customization",
+                        "offset": 37,
+                        "length": 13
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Do you have the grilled chicken salad today?",
+                "language": "en-us",
+                "intent": "CheckAvailability",
+                "entities": [
+                    {
+                        "category": "FoodItem",
+                        "offset": 16,
+                        "length": 21
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "I want a large iced coffee and a breakfast burrito",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Drink",
+                        "offset": 10,
+                        "length": 16
+                    },
+                    {
+                        "category": "FoodItem",
+                        "offset": 31,
+                        "length": 17
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Remove the lettuce from my chicken wrap",
+                "language": "en-us",
+                "intent": "ModifyOrder",
+                "entities": [
+                    {
+                        "category": "Customization",
+                        "offset": 7,
+                        "length": 11
+                    },
+                    {
+                        "category": "FoodItem",
+                        "offset": 27,
+                        "length": 12
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Can you get me a spicy chicken combo with onion rings?",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 17,
+                        "length": 19
+                    },
+                    {
+                        "category": "Side",
+                        "offset": 42,
+                        "length": 11
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "What gluten-free items do you have?",
+                "language": "en-us",
+                "intent": "InquireMenu",
+                "entities": [
+                    {
+                        "category": "FoodType",
+                        "offset": 5,
+                        "length": 11
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Please cancel my order for a large soda",
+                "language": "en-us",
+                "intent": "CancelOrder",
+                "entities": [
+                    {
+                        "category": "Drink",
+                        "offset": 29,
+                        "length": 10
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "I’d like a double cheeseburger combo with a milkshake",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 11,
+                        "length": 25
+                    },
+                    {
+                        "category": "Drink",
+                        "offset": 44,
+                        "length": 9
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "How long will my combo meal take?",
+                "language": "en-us",
+                "intent": "InquireWaitTime",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 17,
+                        "length": 10
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Can I get a kids combo with a toy and apple juice?",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 12,
+                        "length": 10
+                    },
+                    {
+                        "category": "Customization",
+                        "offset": 30,
+                        "length": 8
+                    },
+                    {
+                        "category": "Drink",
+                        "offset": 38,
+                        "length": 11
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Is the limited-time BBQ burger still available?",
+                "language": "en-us",
+                "intent": "CheckAvailability",
+                "entities": [
+                    {
+                        "category": "FoodItem",
+                        "offset": 20,
+                        "length": 10
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "I need a quick combo with fries and a diet coke",
+                "language": "en-us",
+                "intent": "PlaceOrder",
+                "entities": [
+                    {
+                        "category": "Combo",
+                        "offset": 10,
+                        "length": 11
+                    },
+                    {
+                        "category": "Side",
+                        "offset": 26,
+                        "length": 5
+                    },
+                    {
+                        "category": "Drink",
+                        "offset": 38,
+                        "length": 9
+                    }
+                ],
+                "dataset": "Train"
+            }
+        ]
+    }
+}
